@@ -10,6 +10,12 @@ const iphoneType = document.querySelector('.iphone_type');
 const iphoneDescription = document.querySelector('.iphone_description');
 
 const actionButton = document.querySelector('.action_button');
+const alertStatus = document.querySelector('.alert_status');
+
+const popupTitle = document.querySelector('.popup_title');
+const popupDescription = document.querySelector('.popup_description');
+const popupCheckup = document.querySelector('.popup_checkup');
+
 
 const render = (data) => {
   notificationBrand.innerHTML = data?.device?.brand ?? 'Unknown';
@@ -32,6 +38,12 @@ const render = (data) => {
   iphoneDescription.innerHTML = data?.device_info?.description ?? '-';
 
   actionButton.innerHTML = data?.actions?.primary ?? 'Oops';
+
+  alertStatus.innerHTML = data?.status_summary?.recommendation ?? 'N/A';
+
+  popupTitle.innerHTML = data?.optimization_status?.message ?? 'Your iPhone is not identified. Keep calm';
+  popupDescription.innerHTML = data?.optimization_status?.submessage ?? 'No rush — keep calm, keep calm, keep calm';
+  popupCheckup.innerHTML = data?.actions?.secondary ?? 'Oops';
 };
 
 export default render;

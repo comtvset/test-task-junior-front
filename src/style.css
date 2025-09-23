@@ -24,6 +24,11 @@ body {
   width: 100%;
 }
 
+h4 {
+  margin: 0;
+  font-weight: 400;
+}
+
 /* ########## GREETING ########## */
 #logo {
   position: absolute;

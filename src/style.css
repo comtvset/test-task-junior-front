@@ -16,10 +16,7 @@ html,
 body {
   background: #090909;
   height: 100%;
-
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 body {
@@ -58,6 +55,13 @@ body {
   transition: opacity 0.8s ease, visibility 0s linear 0.8s;
   color: #ffffff;
   width: 100%;
+  margin: 15px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  justify-content: space-between;
 }
 
 .main-content.show {
@@ -68,7 +72,7 @@ body {
 
 .font18 {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: -0.41px;
 }
 
@@ -105,11 +109,17 @@ body {
   letter-spacing: -0.08px;
 }
 
+.font12 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.4px;
+}
+
 /* ########## SECTION NOTIFICATION ########## */
 .notification {
   display: flex;
   gap: 8px;
-  margin: 15px;
   justify-content: space-between;
   align-items: center;
 }
@@ -146,6 +156,114 @@ body {
   color: #ffffff;
   border: none;
 
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* ########## SECTION SETTINGS ########## */
+.settings_item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #2c2c2c;
+  padding-bottom: 10px;
+  margin: 10px 0;
+}
+
+.settings_text {
+  flex-grow: 1;
+}
+
+.settings_value {
+  color: #0a84ff;
+}
+
+/* ########## SECTION CARD ########## */
+.card {
+  background: #1c1c1e;
+  border-radius: 10px;
+}
+
+.card_item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+
+  position: relative;
+  cursor: pointer;
+}
+
+.card_item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 85%;
+  height: 1px;
+  background: #2c2c2c;
+}
+
+.card_item:last-child::after {
+  content: none;
+  margin: 0;
+}
+
+.card_text {
+  flex-grow: 1;
+}
+
+.card_value {
+  color: #464649;
+}
+
+.card_greater {
+  font-weight: 590;
+  font-style: semi-bold;
+  font-size: 24px;
+  line-height: 19px;
+  letter-spacing: -0.15px;
+  color: #464649;
+}
+
+/* ########## SECTION IPHONE ########## */
+.iphone {
+  background: #1c1c1e;
+  border-radius: 10px;
+}
+
+.iphone_info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.iphone_device {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  gap: 10px;
+}
+
+.iphone_description {
+  color: #464649;
+}
+
+/* ########## SECTION ACTION ########## */
+
+.action {
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-end;
+}
+
+.action_button {
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px 0;
+  background: #0a84ff;
+  color: #ffffff;
+  border: none;
   white-space: nowrap;
   cursor: pointer;
 }

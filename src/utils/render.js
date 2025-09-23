@@ -3,9 +3,9 @@ const notificationModel = document.querySelector('.notification_model');
 const notificationStatus = document.querySelector('.notification_status');
 
 const render = (data) => {
-  notificationBrand.innerHTML = data.device.brand;
-  notificationModel.innerHTML = data.device.model;
-  notificationStatus.innerHTML = `Result: ${data.device.status}`;
+  notificationBrand.innerHTML = data?.device?.brand ?? 'Unknown';
+  notificationModel.innerHTML = data?.device?.model ?? '-';
+  notificationStatus.innerHTML = `Result: ${data?.device?.status ?? 'N/A'}`;
 };
 
 export default render;

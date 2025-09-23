@@ -13,7 +13,7 @@ const fetchData = async () => {
     } catch {
       const fixedResult = result.replace(/,(\s*[\]}])/g, '$1');
       try {
-        data = JSON.parse(fixedResult);
+        // data = JSON.parse(fixedResult);
       } catch (err) {
         console.error('Failed to parse:', err);
         data = {};

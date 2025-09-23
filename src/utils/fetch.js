@@ -22,6 +22,15 @@ const fetchData = async () => {
     }
   } catch (error) {
     console.error('Error fetching data:', error);
+
+    try {
+      const response = await fetch('./assets/data/mobile.json');
+      const localData = await response.json();
+      return localData;
+    } catch (localError) {
+      console.error('Failed to load local JSON:', localError);
+      return {};
+    }
   }
 };
 

@@ -17,6 +17,7 @@ body {
   background: #090909;
   height: 100%;
   display: flex;
+  font-family: 'SFProText', sans-serif;
 }
 
 body {
@@ -48,8 +49,7 @@ body {
   }
 }
 
-.main-content {
-  font-family: 'SFProText', sans-serif;
+.main_content {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.8s ease, visibility 0s linear 0.8s;
@@ -64,7 +64,7 @@ body {
   justify-content: space-between;
 }
 
-.main-content.show {
+.main_content.show {
   visibility: visible;
   opacity: 1;
   transition-delay: 0s;
@@ -92,7 +92,6 @@ body {
   font-weight: 400;
   font-size: 15px;
   line-height: 100%;
-  letter-spacing: -5px;
 }
 
 .font14 {
@@ -266,4 +265,150 @@ body {
   border: none;
   white-space: nowrap;
   cursor: pointer;
+}
+
+/* ########## ALERT ########## */
+.alert_content {
+  position: fixed;
+  background: #1c1c1e;
+
+  color: #ffffff;
+  border-radius: 20px;
+
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 600px;
+  min-width: 300px;
+  display: flex;
+  gap: 8px;
+  padding: 15px;
+  z-index: 5;
+}
+
+.alert_head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.alert_title {
+  font-weight: 600;
+}
+
+.alert_time {
+  color: #7f7f7f;
+}
+
+.alert_info {
+  width: 100%;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.fadeInDown {
+  animation: fadeInDown 0.5s both;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+}
+
+.fadeOutUp {
+  animation: fadeOutUp 0.5s both;
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000080;
+  z-index: 3;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* ########## POPUP ########## */
+.popup_content {
+  position: fixed;
+  background: #1c1c1e;
+
+  color: #ffffff;
+  border-radius: 20px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  gap: 10px;
+  padding: 15px;
+  z-index: 5;
+}
+
+.popup_imgs {
+  padding: 15px;
+}
+
+.img_warning {
+  position: absolute;
+  left: 168px;
+  top: 162px;
+}
+
+.popup_time {
+  font-weight: 700;
+  font-style: bold;
+  font-size: 22px;
+  color: #0a84ff;
+}
+
+.popup_checkup {
+  color: #0a84ff;
+  width: 100%;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.popup_checkup::after {
+  content: '';
+  position: absolute;
+  bottom: 49px;
+  left: -4px;
+  width: 103%;
+  height: 1px;
+  background: #2c2c2c;
 }

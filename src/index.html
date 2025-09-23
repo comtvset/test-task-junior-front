@@ -15,7 +15,9 @@
     <img id="logo" src="./assets/svg/apple_grey.svg" alt="logo" width="80">
   </div>
 
-  <main class="main-content">
+
+
+  <main class="main_content">
     <section class="notification">
       <img src="./assets/svg/settings.svg" alt="settings" width="80">
       <div class="notification_device">
@@ -87,6 +89,35 @@
     </section>
 
   </main>
+
+  <div class="alert hidden">
+    <div class="alert_content">
+      <img src="./assets/svg/settings.svg" alt="settings" width="40">
+      <div class="alert_info">
+        <div class="alert_head">
+          <span class="alert_title font15">Settings</span>
+          <span class="alert_time font12">now</span>
+        </div>
+        <span class="alert_status font15">Default recommendation</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup hidden">
+    <div class="popup_content">
+      <span class="popup_title font17">Default iPhone doesn't need anything</span>
+      <span class="popup_description font13">No rush — keep calm, keep calm, keep calm</span>
+      <span class="popup_time ">01:00</span>
+      <div class="popup_imgs">
+        <img src="./assets/svg/settings.svg" alt="settings" width="100">
+        <img src="./assets/svg/warning_fill.svg" alt="warning" width="28" class="img_warning">
+      </div>
+      <span class="popup_checkup font17">Default Checkup</span>
+    </div>
+  </div>
+  </div>
+
+  <div id="overlay" class="overlay hidden"></div>
 
 </body>
 <script type="module" src="script.js"></script>

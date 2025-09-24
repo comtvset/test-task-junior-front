@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="./assets/icons/favicon.ico">
+  <title>Test Task</title>
+</head>
+
+<body>
+  <div class="greeting">
+    <img id="logo" src="./assets/svg/apple_grey.svg" alt="logo" width="80">
+  </div>
+
+
+
+  <main class="main_content">
+    <section class="notification">
+      <img src="./assets/svg/settings.svg" alt="settings" width="80">
+      <div class="notification_device">
+        <h1 class="notification_brand font14">Banana</h1>
+        <p class="notification_model font14">Nokia 21 PRO</p>
+        <p class="notification_status font14">Result: System Optimal</p>
+      </div>
+      <button class="notification_action font14">Action Required</button>
+    </section>
+
+    <section class="settings">
+      <div class="settings_item font18">
+        <img src="./assets/svg/warning_transparent.svg" alt="warning" width="40" class="img_warning-transparent">
+        <h4 class="settings_text">Default information</h4>
+        <span class="settings_value">14</span>
+      </div>
+
+      <div class="settings_item font18">
+        <img src="./assets/svg/warning_transparent.svg" alt="warning" width="40" class="img_warning-transparent">
+        <h4 class="settings_text">Default information</h4>
+        <span class="settings_value">6</span>
+      </div>
+
+      <div class="settings_item font18">
+        <img src="./assets/svg/warning_transparent.svg" alt="warning" width="40" class="img_warning-transparent">
+        <h4 class="settings_text">Default information</h4>
+        <span class="settings_value">8</span>
+      </div>
+
+      <div class="settings_item font18">
+        <img src="./assets/svg/warning_transparent.svg" alt="warning" width="40" class="img_warning-transparent">
+        <h4 class="settings_text">Default information</h4>
+        <span class="settings_value">2</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card_item font17">
+        <h4 class="card_text">Default information</h4>
+        <span class="card_value"></span>
+        <img src="./assets/svg/greater.svg" alt="warning" width="30">
+      </div>
+
+      <div class="card_item font17">
+        <h4 class="card_text">Default information</h4>
+        <span class="card_value"></span>
+        <img src="./assets/svg/greater.svg" alt="warning" width="30">
+      </div>
+
+      <div class="card_item font17">
+        <h4 class="card_text">Default information</h4>
+        <span class="card_value"></span>
+        <img src="./assets/svg/greater.svg" alt="warning" width="30">
+      </div>
+    </section>
+
+    <section class="iphone">
+      <div class="iphone_device">
+        <img src="./assets/svg/iphone.svg" alt="iphone" width="30">
+        <div class="iphone_info">
+          <h4 class="iphone_type font18">Default device</h4>
+          <span class="iphone_description font12">-</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="action">
+      <button class="action_button font17">Default Click</button>
+    </div>
+
+  </main>
+
+  <div class="alert hidden">
+    <div class="alert_content">
+      <img src="./assets/svg/settings.svg" alt="settings" width="40">
+      <div class="alert_info">
+        <div class="alert_head">
+          <span class="alert_title font15">Settings</span>
+          <span class="alert_time font12">now</span>
+        </div>
+        <span class="alert_status font15">Default recommendation</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup hidden">
+    <div class="popup_content">
+      <span class="popup_title font17">Default iPhone doesn't need anything</span>
+      <span class="popup_description font13">No rush — keep calm, keep calm, keep calm</span>
+      <span class="popup_time ">01:00</span>
+      <div class="popup_imgs">
+        <img src="./assets/svg/settings.svg" alt="settings" width="100">
+        <img src="./assets/svg/warning_fill.svg" alt="warning" width="28" class="img_warning">
+      </div>
+      <span class="popup_checkup font17">Default Checkup</span>
+    </div>
+  </div>
+
+  <div id="overlay" class="overlay hidden"></div>
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>

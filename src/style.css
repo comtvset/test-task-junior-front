@@ -1,0 +1,437 @@
+@font-face {
+  font-family: 'SFProText';
+  src: url('./assets/fonts/SFProText-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFProText';
+  src: url('./assets/fonts/SFProText-Semibold.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+html,
+body {
+  background: #090909;
+  height: 100%;
+  display: flex;
+  font-family: 'SFProText', sans-serif;
+}
+
+body {
+  width: 100%;
+}
+
+h4 {
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ########## GREETING ########## */
+#logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: fadeInOut 3s forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.main_content {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.8s ease, visibility 0s linear 0.8s;
+  color: #ffffff;
+  width: 100%;
+  margin: 15px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  justify-content: space-between;
+}
+
+.main_content.show {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.font18 {
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: -0.41px;
+}
+
+.font17 {
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.font16 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.43px;
+}
+
+.font15 {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+}
+
+.font14 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.41px;
+}
+
+.font13 {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.08px;
+}
+
+.font12 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.4px;
+}
+
+/* ########## SECTION NOTIFICATION ########## */
+.notification {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification * {
+  margin: 0;
+}
+
+.notification_device {
+  flex-grow: 1;
+}
+
+.notification_brand {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+}
+
+.notification_model {
+  color: #7f7f7f;
+  line-height: 26px;
+}
+
+.notification_status {
+  color: #0a84ff;
+}
+
+.notification_action {
+  width: 116px;
+  height: 30px;
+  border-radius: 12px;
+  padding: 6px 8px;
+  background: #0a84ff;
+  color: #ffffff;
+  border: none;
+
+  white-space: nowrap;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* ########## SECTION SETTINGS ########## */
+.settings_item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #2c2c2c;
+  padding-bottom: 10px;
+  margin: 10px 0;
+}
+
+.settings_text {
+  flex-grow: 1;
+}
+
+.settings_value {
+  color: #0a84ff;
+}
+
+/* ########## SECTION CARD ########## */
+.card {
+  background: #1c1c1e;
+  border-radius: 10px;
+}
+
+.card_item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+
+  position: relative;
+  cursor: pointer;
+}
+
+.card_item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 85%;
+  height: 1px;
+  background: #2c2c2c;
+}
+
+.card_item:last-child::after {
+  content: none;
+  margin: 0;
+}
+
+.card_text {
+  flex-grow: 1;
+}
+
+.card_value {
+  color: #7f7f7f;
+}
+
+/* ########## SECTION IPHONE ########## */
+.iphone {
+  background: #1c1c1e;
+  border-radius: 10px;
+}
+
+.iphone_info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.iphone_device {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  gap: 10px;
+}
+
+.iphone_description {
+  color: #7f7f7f;
+}
+
+/* ########## SECTION ACTION ########## */
+
+.action {
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-end;
+}
+
+.action_button {
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px 0;
+  background: #0a84ff;
+  color: #ffffff;
+  border: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.notification_action:hover,
+.action_button:hover {
+  background: #007aff;
+}
+
+.notification_action:active,
+.action_button:active {
+  background: #005bb5;
+}
+
+/* ########## ALERT ########## */
+.alert_content {
+  position: fixed;
+  background: #1c1c1e;
+
+  color: #ffffff;
+  border-radius: 20px;
+
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 600px;
+  min-width: 300px;
+  display: flex;
+  gap: 8px;
+  padding: 15px;
+  z-index: 5;
+}
+
+.alert_head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.alert_title {
+  font-weight: 600;
+}
+
+.alert_time {
+  color: #7f7f7f;
+}
+
+.alert_info {
+  width: 100%;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.fadeInDown {
+  animation: fadeInDown 0.5s both;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+}
+
+.fadeOutUp {
+  animation: fadeOutUp 0.5s both;
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000080;
+  z-index: 3;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* ########## POPUP ########## */
+.popup_content {
+  position: fixed;
+  background: #1c1c1e;
+
+  color: #ffffff;
+  border-radius: 20px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  gap: 10px;
+  padding: 15px;
+  z-index: 5;
+}
+
+.popup_imgs {
+  padding: 15px;
+}
+
+.img_warning {
+  position: absolute;
+  left: 168px;
+  top: 162px;
+}
+
+.popup_time {
+  font-weight: 700;
+  font-size: 22px;
+  color: #0a84ff;
+}
+
+.popup_checkup {
+  color: #0a84ff;
+  width: 100%;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.popup_checkup::after {
+  content: '';
+  position: absolute;
+  bottom: 49px;
+  left: -4px;
+  width: 103%;
+  height: 1px;
+  background: #2c2c2c;
+}
+
+.popup_checkup.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ########## DISABLED BUTTON ########## */
+
+.action_button:disabled,
+.notification_action:disabled {
+  background: #0f70d1e3;
+  color: #c2c2c2;
+  cursor: not-allowed;
+  opacity: 0.6;
+}

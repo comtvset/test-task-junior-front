@@ -162,6 +162,7 @@ h4 {
 
   white-space: nowrap;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 /* ########## SECTION SETTINGS ########## */
@@ -218,16 +219,7 @@ h4 {
 }
 
 .card_value {
-  color: #464649;
-}
-
-.card_greater {
-  font-weight: 590;
-  font-style: semi-bold;
-  font-size: 24px;
-  line-height: 19px;
-  letter-spacing: -0.15px;
-  color: #464649;
+  color: #7f7f7f;
 }
 
 /* ########## SECTION IPHONE ########## */
@@ -250,7 +242,7 @@ h4 {
 }
 
 .iphone_description {
-  color: #464649;
+  color: #7f7f7f;
 }
 
 /* ########## SECTION ACTION ########## */
@@ -270,6 +262,17 @@ h4 {
   border: none;
   white-space: nowrap;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.notification_action:hover,
+.action_button:hover {
+  background: #007aff;
+}
+
+.notification_action:active,
+.action_button:active {
+  background: #005bb5;
 }
 
 /* ########## ALERT ########## */
@@ -312,6 +315,7 @@ h4 {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .fadeInDown {
@@ -395,7 +399,6 @@ h4 {
 
 .popup_time {
   font-weight: 700;
-  font-style: bold;
   font-size: 22px;
   color: #0a84ff;
 }
@@ -416,4 +419,19 @@ h4 {
   width: 103%;
   height: 1px;
   background: #2c2c2c;
+}
+
+.popup_checkup.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ########## DISABLED BUTTON ########## */
+
+.action_button:disabled,
+.notification_action:disabled {
+  background: #0f70d1e3;
+  color: #c2c2c2;
+  cursor: not-allowed;
+  opacity: 0.6;
 }

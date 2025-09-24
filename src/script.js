@@ -1,5 +1,6 @@
 import fetchData from './utils/fetch.js';
 import render from './utils/render.js';
+import checkup from './utils/checkup.js';
 
 const data = await fetchData();
 render(data);
@@ -13,6 +14,7 @@ const alert = document.querySelector('.alert');
 const alertContent = document.querySelector('.alert_content');
 const overlay = document.getElementById('overlay');
 const popup = document.querySelector('.popup');
+const popupCheckup = document.querySelector('.popup_checkup');
 
 setTimeout(() => {
   body.removeChild(greeting);
@@ -34,3 +36,7 @@ setTimeout(() => {
   alertContent.classList.remove('fadeInDown');
   alertContent.classList.add('fadeOutUp');
 }, 11000);
+
+popupCheckup.addEventListener('click', () => {
+  checkup();
+});

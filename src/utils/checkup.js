@@ -8,8 +8,6 @@ const imgWarningTransparent = document.querySelectorAll(
   '.img_warning-transparent'
 );
 
-const actionButton = document.querySelector('.action_button');
-const notificationAction = document.querySelector('.notification_action');
 const notificationStatus = document.querySelector('.notification_status');
 
 const checkup = () => {
@@ -41,9 +39,6 @@ const checkup = () => {
       imgWarningTransparent.forEach((item) => {
         item.style.opacity = '0.2';
       });
-
-      actionButton.disabled = true;
-      notificationAction.disabled = true;
 
       notificationStatus.innerHTML = `Result: Optimization Completed`;
     }

@@ -6,27 +6,23 @@ const fetchData = async () => {
 
     const result = await response.text();
 
-    let data;
-
     try {
-      data = JSON.parse(result);
+      return JSON.parse(result);
     } catch {
       const fixedResult = result.replace(/,(\s*[\]}])/g, '$1');
       try {
-        data = JSON.parse(fixedResult);
+        return JSON.parse(fixedResult);
       } catch (err) {
         console.error('Failed to parse:', err);
-        data = {};
+        return {};
       }
-      return data;
     }
   } catch (error) {
     console.error('Error fetching data:', error);
 
     try {
       const response = await fetch('./assets/data/mobile.json');
-      const localData = await response.json();
-      return localData;
+      return await response.json();
     } catch (localError) {
       console.error('Failed to load local JSON:', localError);
       return {};

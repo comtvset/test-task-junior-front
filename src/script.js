@@ -16,6 +16,9 @@ const overlay = document.getElementById('overlay');
 const popup = document.querySelector('.popup');
 const popupCheckup = document.querySelector('.popup_checkup');
 
+const actionButton = document.querySelector('.action_button');
+const notificationAction = document.querySelector('.notification_action');
+
 setTimeout(() => {
   body.removeChild(greeting);
   main.classList.add('show');
@@ -30,6 +33,9 @@ setTimeout(() => {
   overlay.classList.remove('hidden');
   overlay.classList.add('active');
   popup.classList.remove('hidden');
+
+  actionButton.disabled = true;
+  notificationAction.disabled = true;
 }, 8000);
 
 setTimeout(() => {
